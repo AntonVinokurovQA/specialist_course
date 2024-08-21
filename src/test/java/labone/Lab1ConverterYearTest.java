@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Lab1ConverterYearTest {
     Lab1ConverterYear test1 = new Lab1ConverterYear();
+
     @ParameterizedTest
     @CsvSource({
             "1999,1,'Jan 1'",
