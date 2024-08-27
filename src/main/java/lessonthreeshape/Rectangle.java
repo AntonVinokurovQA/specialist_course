@@ -10,6 +10,11 @@ public class Rectangle extends Shape {
     }
 
     @Override
+    public double area() {
+        return a * b;
+    }
+
+    @Override
     public String toString() {
         return super.toString() + ", a=" + a +
                 ", b=" + b;
