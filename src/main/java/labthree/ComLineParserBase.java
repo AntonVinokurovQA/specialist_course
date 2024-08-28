@@ -1,6 +1,6 @@
 package labthree;
 
-public class ComLineParserBase {
+public abstract class ComLineParserBase {
     private String[] keys;           // ключи
     private String[] delimeters;     // разделители  "/", "-"
 
@@ -15,14 +15,13 @@ public class ComLineParserBase {
         this.delimeters = delimeters;
     }
 
-    protected void OnUsage(String errorKey) {
-    }
+    protected abstract void OnUsage(String errorKey);
 
     protected SwitchStatus OnSwitch(String key, String keyValue) {
         return SwitchStatus.Error;
     }
 
-    protected Boolean parse(String[] args) {
+    protected final Boolean parse(String[] args) {
         SwitchStatus ss = SwitchStatus.NoError;
 
         int argNum;
